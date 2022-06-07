@@ -39,9 +39,9 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.gitegg.platform</groupId>
-                <artifactId>gitegg-platform-bom</artifactId>
-                <version>${project.version}</version>
+                <groupId>com.lzy.platform</groupId>
+                <artifactId>lzy-platform-bom</artifactId>
+                <version>1.0-SNAPSHOT</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
