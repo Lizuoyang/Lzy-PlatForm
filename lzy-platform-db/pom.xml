@@ -11,6 +11,7 @@
 
     <artifactId>lzy-platform-db</artifactId>
     <name>${project.artifactId}</name>
+    <description>管理系统需要用到的数据库驱动、数据库连接池的jar包及配置</description>
     <version>${project.parent.version}</version>
     <packaging>jar</packaging>
 

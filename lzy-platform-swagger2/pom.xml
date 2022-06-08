@@ -11,6 +11,7 @@
 
     <artifactId>lzy-platform-swagger2</artifactId>
     <name>${project.artifactId}</name>
+    <description>用于管理系统生成api文档、调试api接口</description>
     <version>${project.parent.version}</version>
     <packaging>jar</packaging>
 

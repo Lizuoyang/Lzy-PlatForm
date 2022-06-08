@@ -11,6 +11,7 @@
 
     <artifactId>lzy-platform-mybatis</artifactId>
     <name>${project.artifactId}</name>
+    <description>用于管理系统需要用到的持久层框架：mybatis-plus</description>
     <version>${project.parent.version}</version>
     <packaging>jar</packaging>
 

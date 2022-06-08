@@ -13,6 +13,7 @@
     <groupId>com.lzy.platform</groupId>
     <artifactId>lzy-platform-bom</artifactId>
     <name>${project.artifactId}</name>
+    <description>统一管理自定义方法扩展jar包及第三方Jar包版本。</description>
     <version>${lzy.project.version}</version>
     <packaging>pom</packaging>
 
