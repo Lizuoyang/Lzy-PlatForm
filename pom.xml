@@ -13,6 +13,7 @@
         <module>lzy-platform-bom</module>
         <module>lzy-platform-db</module>
         <module>lzy-platform-mybatis</module>
+        <module>lzy-platform-swagger2</module>
     </modules>
 
     <properties>

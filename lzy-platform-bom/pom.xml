@@ -39,18 +39,26 @@
         <druid.version>1.1.23</druid.version>
         <!-- Mybatis Plus增强工具 -->
         <mybatis.plus.version>3.4.0</mybatis.plus.version>
+        <!-- Knife4j Swagger2文档 -->
+        <knife4j.version>3.0.3</knife4j.version>
 
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!-- gitegg数据库驱动及连接池 -->
+            <!-- swagger-knife4j -->
+            <dependency>
+                <groupId>com.lzy.platform</groupId>
+                <artifactId>lzy-platform-swagger2</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <!-- 数据库驱动及连接池 -->
             <dependency>
                 <groupId>com.lzy.platform</groupId>
                 <artifactId>lzy-platform-db</artifactId>
                 <version>${lzy.project.version}</version>
             </dependency>
-            <!-- gitegg mybatis-plus -->
+            <!-- mybatis-plus -->
             <dependency>
                 <groupId>com.lzy.platform</groupId>
                 <artifactId>lzy-platform-mybatis</artifactId>
@@ -79,6 +87,14 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis.plus.version}</version>
+            </dependency>
+            <!-- Swagger2 knife4j bom方式引入 -->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-dependencies</artifactId>
+                <version>${knife4j.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
