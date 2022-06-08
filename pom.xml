@@ -14,6 +14,7 @@
         <module>lzy-platform-db</module>
         <module>lzy-platform-mybatis</module>
         <module>lzy-platform-swagger2</module>
+        <module>lzy-platform-springboot</module>
     </modules>
 
     <properties>
@@ -36,6 +37,14 @@
         <spring.platform.version>Cairo-SR8</spring.platform.version>
 
     </properties>
+
+    <dependencies>
+        <!-- Lombok 通过简单注解消除冗长代码  -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
 
     <dependencyManagement>
         <dependencies>

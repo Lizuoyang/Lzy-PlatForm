@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>lzy-platform</artifactId>
+        <groupId>com.lzy.platform</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>lzy-platform-springboot</artifactId>
+    <name>${project.artifactId}</name>
+    <description>用于Spring Boot相关功能的自定义及扩展</description>
+    <version>${project.parent.version}</version>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <!-- 设置optional为true，让这个包在项目之间依赖不传递。-->
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>com.lzy.platform</groupId>
+            <artifactId>lzy-platform-swagger2</artifactId>
+            <!-- 设置optional为true，让这个包在项目之间依赖不传递。 -->
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+
+</project>
