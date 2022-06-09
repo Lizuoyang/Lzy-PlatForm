@@ -15,6 +15,7 @@
         <module>lzy-platform-mybatis</module>
         <module>lzy-platform-swagger2</module>
         <module>lzy-platform-springboot</module>
+        <module>lzy-platform-springcloud</module>
     </modules>
 
     <properties>
