@@ -3,8 +3,8 @@ package com.lzy.platform.springboot.common.base;
 import com.lzy.platform.springboot.common.enums.ResultCodeEnum;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Getter;
-import lombok.ToString;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @ClassName Result
@@ -12,8 +12,8 @@ import lombok.ToString;
  * @Author LiZuoYang
  * @Date 2022/6/8 14:54
  **/
-@Getter
-@ToString
+@Data
+@NoArgsConstructor
 @ApiModel("通用响应类")
 public class Result<T> {
     @ApiModelProperty("是否成功")
