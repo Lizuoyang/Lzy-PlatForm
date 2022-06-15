@@ -42,11 +42,15 @@
             <artifactId>spring-boot-starter-web</artifactId>
             <optional>true</optional>
         </dependency>
-
         <!-- 通用组件 -->
         <dependency>
             <groupId>com.lzy.platform</groupId>
             <artifactId>lzy-platform-base</artifactId>
+        </dependency>
+        <!-- Sentinel 使用Nacos配置 -->
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-datasource-nacos</artifactId>
         </dependency>
 
     </dependencies>
