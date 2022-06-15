@@ -1,6 +1,6 @@
-package com.lzy.platform.springboot.common.base;
+package com.lzy.platform.base.base;
 
-import com.lzy.platform.springboot.common.enums.ResultCodeEnum;
+import com.lzy.platform.base.enums.ResultCodeEnum;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

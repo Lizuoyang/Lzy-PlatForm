@@ -36,6 +36,19 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
         </dependency>
+        <!-- 为了使用HttpServletRequest和HttpServletResponse -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- 通用组件 -->
+        <dependency>
+            <groupId>com.lzy.platform</groupId>
+            <artifactId>lzy-platform-base</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>

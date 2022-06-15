@@ -1,6 +1,6 @@
-package com.lzy.platform.springboot.common.exception;
+package com.lzy.platform.base.exception;
 
-import com.lzy.platform.springboot.common.enums.ResultCodeEnum;
+import com.lzy.platform.base.enums.ResultCodeEnum;
 import lombok.Getter;
 
 /**

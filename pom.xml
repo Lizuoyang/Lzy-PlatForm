@@ -16,6 +16,7 @@
         <module>lzy-platform-swagger2</module>
         <module>lzy-platform-springboot</module>
         <module>lzy-platform-springcloud</module>
+        <module>lzy-platform-base</module>
     </modules>
 
     <properties>
@@ -52,7 +53,7 @@
             <dependency>
                 <groupId>com.lzy.platform</groupId>
                 <artifactId>lzy-platform-bom</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>0.0.1-SNAPSHOT</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

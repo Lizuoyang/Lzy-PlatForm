@@ -30,7 +30,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!-- lzy-cloud项目统一设置版本号 -->
-        <lzy.project.version>1.0-SNAPSHOT</lzy.project.version>
+        <lzy.project.version>0.0.1-SNAPSHOT</lzy.project.version>
 
         <!-- mysql数据库驱动 -->
         <mysql.connector.version>8.0.17</mysql.connector.version>
@@ -44,7 +44,8 @@
         <knife4j.version>3.0.3</knife4j.version>
         <!-- Spring Cloud Alibaba -->
         <spring.cloud.alibaba>2.2.3.RELEASE</spring.cloud.alibaba>
-
+        <!-- hutool Java常用工具包 -->
+        <hutool.version>5.5.1</hutool.version>
     </properties>
 
     <dependencyManagement>
@@ -53,7 +54,7 @@
             <dependency>
                 <groupId>com.lzy.platform</groupId>
                 <artifactId>lzy-platform-swagger2</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${lzy.project.version}</version>
             </dependency>
             <!-- 数据库驱动及连接池 -->
             <dependency>
@@ -65,6 +66,12 @@
             <dependency>
                 <groupId>com.lzy.platform</groupId>
                 <artifactId>lzy-platform-mybatis</artifactId>
+                <version>${lzy.project.version}</version>
+            </dependency>
+            <!-- base 通用组件-->
+            <dependency>
+                <groupId>com.lzy.platform</groupId>
+                <artifactId>lzy-platform-base</artifactId>
                 <version>${lzy.project.version}</version>
             </dependency>
             <!-- mysql数据库驱动 -->
@@ -106,6 +113,12 @@
                 <version>${spring.cloud.alibaba}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <!-- hutool java工具包-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

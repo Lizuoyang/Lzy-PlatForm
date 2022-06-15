@@ -1,9 +1,10 @@
 package com.lzy.platform.springboot.common.advice;
 
-import com.lzy.platform.springboot.common.base.Result;
-import com.lzy.platform.springboot.common.enums.ResultCodeEnum;
-import com.lzy.platform.springboot.common.exception.BusinessException;
-import com.lzy.platform.springboot.common.exception.SystemException;
+
+import com.lzy.platform.base.base.Result;
+import com.lzy.platform.base.enums.ResultCodeEnum;
+import com.lzy.platform.base.exception.BusinessException;
+import com.lzy.platform.base.exception.SystemException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.converter.HttpMessageNotReadableException;
