@@ -17,6 +17,7 @@
         <module>lzy-platform-springboot</module>
         <module>lzy-platform-springcloud</module>
         <module>lzy-platform-base</module>
+        <module>lzy-platform-redis</module>
     </modules>
 
     <properties>
