@@ -18,6 +18,8 @@
         <module>lzy-platform-springcloud</module>
         <module>lzy-platform-base</module>
         <module>lzy-platform-redis</module>
+        <module>lzy-platform-oauth2</module>
+        <module>lzy-platform-captcha</module>
     </modules>
 
     <properties>

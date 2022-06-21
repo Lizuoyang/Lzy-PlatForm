@@ -9,22 +9,28 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>lzy-platform-mybatis</artifactId>
+    <artifactId>lzy-platform-oauth2</artifactId>
     <name>${project.artifactId}</name>
-    <description>用于管理系统需要用到的持久层框架：mybatis-plus</description>
+    <description>用于统一管理OAuth2版本，及统一配置</description>
     <version>${project.parent.version}</version>
     <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>com.lzy.platform</groupId>
-            <artifactId>lzy-platform-springboot</artifactId>
-            <version>${project.parent.version}</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-oauth2-jose</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-oauth2-resource-server</artifactId>
         </dependency>
         <dependency>
             <groupId>com.lzy.platform</groupId>
@@ -32,5 +38,6 @@
             <optional>true</optional>
         </dependency>
     </dependencies>
+
 
 </project>

@@ -76,9 +76,16 @@
                 <artifactId>lzy-platform-base</artifactId>
                 <version>${lzy.project.version}</version>
             </dependency>
+            <!-- redis 缓存-->
             <dependency>
                 <groupId>com.lzy.platform</groupId>
                 <artifactId>lzy-platform-redis</artifactId>
+                <version>${lzy.project.version}</version>
+            </dependency>
+            <!-- oauth2 认证和授权 -->
+            <dependency>
+                <groupId>com.lzy.platform</groupId>
+                <artifactId>lzy-platform-oauth2</artifactId>
                 <version>${lzy.project.version}</version>
             </dependency>
             <!-- mysql数据库驱动 -->
