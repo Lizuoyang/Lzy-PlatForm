@@ -1,7 +1,7 @@
 package com.lzy.platform.springboot.common.advice;
 
 
-import com.lzy.platform.base.base.Result;
+import com.lzy.platform.base.result.Result;
 import com.lzy.platform.base.enums.ResultCodeEnum;
 import com.lzy.platform.base.exception.BusinessException;
 import com.lzy.platform.base.exception.SystemException;

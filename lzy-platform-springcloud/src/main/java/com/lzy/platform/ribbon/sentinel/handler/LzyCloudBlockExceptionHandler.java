@@ -3,7 +3,7 @@ package com.lzy.platform.ribbon.sentinel.handler;
 import com.alibaba.csp.sentinel.adapter.spring.webmvc.callback.BlockExceptionHandler;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.lzy.platform.base.base.Result;
+import com.lzy.platform.base.result.Result;
 import com.lzy.platform.base.enums.ResultCodeEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

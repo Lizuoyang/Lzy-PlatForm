@@ -1,4 +1,4 @@
-package com.lzy.platform.base.base;
+package com.lzy.platform.base.result;
 
 import com.lzy.platform.base.enums.ResultCodeEnum;
 import io.swagger.annotations.ApiModel;

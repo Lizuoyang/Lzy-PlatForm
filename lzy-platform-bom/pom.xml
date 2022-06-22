@@ -48,6 +48,10 @@
         <hutool.version>5.5.1</hutool.version>
         <!-- redisson Redis客户端工具 -->
         <redisson.version>3.13.6</redisson.version>
+        <!-- AJ-Captcha滑动验证码 -->
+        <captcha.version>1.2.7</captcha.version>
+        <!-- Easy-Captcha图形验证码 -->
+        <easy.captcha.version>1.6.2</easy.captcha.version>
     </properties>
 
     <dependencyManagement>
@@ -86,6 +90,11 @@
             <dependency>
                 <groupId>com.lzy.platform</groupId>
                 <artifactId>lzy-platform-oauth2</artifactId>
+                <version>${lzy.project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lzy.platform</groupId>
+                <artifactId>lzy-platform-captcha</artifactId>
                 <version>${lzy.project.version}</version>
             </dependency>
             <!-- mysql数据库驱动 -->
@@ -139,6 +148,18 @@
                 <groupId>org.redisson</groupId>
                 <artifactId>redisson-spring-boot-starter</artifactId>
                 <version>${redisson.version}</version>
+            </dependency>
+            <!-- captcha 滑动验证码-->
+            <dependency>
+                <groupId>com.github.anji-plus</groupId>
+                <artifactId>captcha-spring-boot-starter</artifactId>
+                <version>${captcha.version}</version>
+            </dependency>
+            <!-- easy-captcha 图形验证码-->
+            <dependency>
+                <groupId>com.github.whvcse</groupId>
+                <artifactId>easy-captcha</artifactId>
+                <version>${easy.captcha.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
