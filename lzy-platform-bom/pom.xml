@@ -74,16 +74,16 @@
                 <artifactId>lzy-platform-mybatis</artifactId>
                 <version>${lzy.project.version}</version>
             </dependency>
-            <!-- base 通用组件-->
+            <!-- base 通用组件 -->
             <dependency>
                 <groupId>com.lzy.platform</groupId>
                 <artifactId>lzy-platform-base</artifactId>
                 <version>${lzy.project.version}</version>
             </dependency>
-            <!-- redis 缓存-->
+            <!-- 缓存 -->
             <dependency>
                 <groupId>com.lzy.platform</groupId>
-                <artifactId>lzy-platform-redis</artifactId>
+                <artifactId>lzy-platform-cache</artifactId>
                 <version>${lzy.project.version}</version>
             </dependency>
             <!-- oauth2 认证和授权 -->
