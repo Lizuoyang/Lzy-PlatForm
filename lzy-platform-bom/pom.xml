@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.3.RELEASE</version>
+        <version>2.3.12.RELEASE</version>
         <relativePath />
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -42,6 +42,10 @@
         <mybatis.plus.version>3.4.0</mybatis.plus.version>
         <!-- Knife4j Swagger2文档 -->
         <knife4j.version>3.0.3</knife4j.version>
+        <!-- SpringBoot版本号 -->
+        <spring.boot.version>2.3.12.RELEASE</spring.boot.version>
+        <!-- SpringCloud版本号 -->
+        <spring.cloud.version>Hoxton.SR12</spring.cloud.version>
         <!-- Spring Cloud Alibaba -->
         <spring.cloud.alibaba>2.2.3.RELEASE</spring.cloud.alibaba>
         <!-- hutool Java常用工具包 -->
@@ -56,45 +60,32 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- Spring Cloud Alibaba -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring.cloud.alibaba}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <!-- swagger-knife4j -->
             <dependency>
                 <groupId>com.lzy.platform</groupId>
                 <artifactId>lzy-platform-swagger2</artifactId>
-                <version>${lzy.project.version}</version>
-            </dependency>
-            <!-- 数据库驱动及连接池 -->
-            <dependency>
-                <groupId>com.lzy.platform</groupId>
-                <artifactId>lzy-platform-db</artifactId>
-                <version>${lzy.project.version}</version>
-            </dependency>
-            <!-- mybatis-plus -->
-            <dependency>
-                <groupId>com.lzy.platform</groupId>
-                <artifactId>lzy-platform-mybatis</artifactId>
-                <version>${lzy.project.version}</version>
-            </dependency>
-            <!-- base 通用组件 -->
-            <dependency>
-                <groupId>com.lzy.platform</groupId>
-                <artifactId>lzy-platform-base</artifactId>
-                <version>${lzy.project.version}</version>
-            </dependency>
-            <!-- 缓存 -->
-            <dependency>
-                <groupId>com.lzy.platform</groupId>
-                <artifactId>lzy-platform-cache</artifactId>
-                <version>${lzy.project.version}</version>
-            </dependency>
-            <!-- oauth2 认证和授权 -->
-            <dependency>
-                <groupId>com.lzy.platform</groupId>
-                <artifactId>lzy-platform-oauth2</artifactId>
-                <version>${lzy.project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.lzy.platform</groupId>
-                <artifactId>lzy-platform-captcha</artifactId>
                 <version>${lzy.project.version}</version>
             </dependency>
             <!-- mysql数据库驱动 -->
@@ -129,14 +120,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- Spring Cloud Alibaba -->
-            <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>${spring.cloud.alibaba}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
             <!-- hutool java工具包-->
             <dependency>
                 <groupId>cn.hutool</groupId>
@@ -160,6 +143,42 @@
                 <groupId>com.github.whvcse</groupId>
                 <artifactId>easy-captcha</artifactId>
                 <version>${easy.captcha.version}</version>
+            </dependency>
+
+            <!-- 数据库驱动及连接池 -->
+            <dependency>
+                <groupId>com.lzy.platform</groupId>
+                <artifactId>lzy-platform-db</artifactId>
+                <version>${lzy.project.version}</version>
+            </dependency>
+            <!-- mybatis-plus -->
+            <dependency>
+                <groupId>com.lzy.platform</groupId>
+                <artifactId>lzy-platform-mybatis</artifactId>
+                <version>${lzy.project.version}</version>
+            </dependency>
+            <!-- base 通用组件 -->
+            <dependency>
+                <groupId>com.lzy.platform</groupId>
+                <artifactId>lzy-platform-base</artifactId>
+                <version>${lzy.project.version}</version>
+            </dependency>
+            <!-- 缓存 -->
+            <dependency>
+                <groupId>com.lzy.platform</groupId>
+                <artifactId>lzy-platform-cache</artifactId>
+                <version>${lzy.project.version}</version>
+            </dependency>
+            <!-- oauth2 认证和授权 -->
+            <dependency>
+                <groupId>com.lzy.platform</groupId>
+                <artifactId>lzy-platform-oauth2</artifactId>
+                <version>${lzy.project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lzy.platform</groupId>
+                <artifactId>lzy-platform-captcha</artifactId>
+                <version>${lzy.project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

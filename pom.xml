@@ -35,9 +35,9 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!-- SpringBoot版本号 -->
-        <spring.boot.version>2.3.3.RELEASE</spring.boot.version>
+        <spring.boot.version>2.3.12.RELEASE</spring.boot.version>
         <!-- SpringCloud版本号 -->
-        <spring.cloud.version>Hoxton.SR8</spring.cloud.version>
+        <spring.cloud.version>Hoxton.SR12</spring.cloud.version>
         <!-- SpringPlatform版本号 -->
         <spring.platform.version>Cairo-SR8</spring.platform.version>
 
