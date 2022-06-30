@@ -1,12 +1,11 @@
 package com.lzy.platform.mybatis.config;
 
-import cn.hutool.core.util.ObjectUtil;
-import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.extension.plugins.handler.TenantLineHandler;
 import com.baomidou.mybatisplus.extension.plugins.inner.TenantLineInnerInterceptor;
 import com.lzy.platform.mybatis.props.TenantProperties;
 import com.lzy.platform.springboot.utils.LzyCloudAuthUtils;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import net.sf.jsqlparser.expression.Expression;
 import net.sf.jsqlparser.expression.NullValue;
 import net.sf.jsqlparser.expression.StringValue;
@@ -21,6 +20,7 @@ import org.springframework.context.annotation.Configuration;
  * @Author LiZuoYang
  * @Date 2022/6/17 15:16
  **/
+@Slf4j
 @Configuration
 @RequiredArgsConstructor(onConstructor_ = @Autowired)
 @AutoConfigureBefore(MybatisPlusConfig.class)
@@ -45,7 +45,8 @@ public class TenantConfig {
             @Override
             public Expression getTenantId() {
                 String tenantId = LzyCloudAuthUtils.getTenantId();
-                if (ObjectUtil.isNotNull(tenantId) && StrUtil.isNotEmpty(tenantId)) {
+                log.info("TenantConfig.getTenantId() tenantId: {}", tenantId);
+                if (tenantId != null) {
                     return new StringValue(LzyCloudAuthUtils.getTenantId());
                 }
                 return new NullValue();

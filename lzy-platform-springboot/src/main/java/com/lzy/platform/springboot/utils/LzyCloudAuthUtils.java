@@ -75,6 +75,6 @@ public class LzyCloudAuthUtils {
             }
 
         }
-        return null;
+        return tenantId;
     }
 }
