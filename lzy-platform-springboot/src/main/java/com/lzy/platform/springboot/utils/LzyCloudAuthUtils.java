@@ -5,6 +5,7 @@ import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONUtil;
 import com.lzy.platform.base.constant.AuthConstant;
 import com.lzy.platform.base.domain.LzyCloudUser;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
@@ -16,6 +17,7 @@ import java.net.URLDecoder;
  * @Author LiZuoYang
  * @Date 2022/6/17 15:30
  **/
+@Slf4j
 public class LzyCloudAuthUtils {
     /**
      * 获取当前用户
@@ -56,6 +58,7 @@ public class LzyCloudAuthUtils {
         }
         // 租户ID
         String tenantId = request.getHeader(AuthConstant.TENANT_ID);
+        log.info("LzyCloudAuthUtils.getTenantId() tenantId:{}", tenantId);
         // 用户信息
         String user = request.getHeader(AuthConstant.HEADER_USER);
         //如果请求头中的tenantId为空，那么尝试是否能够从登陆用户中去获取租户id
