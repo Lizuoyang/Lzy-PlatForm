@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lzy.platform.base.result.Result;
 import com.lzy.platform.base.enums.ResultCodeEnum;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
@@ -20,11 +21,25 @@ import javax.servlet.http.HttpServletResponse;
 @Slf4j
 @Component
 public class LzyCloudBlockExceptionHandler implements BlockExceptionHandler {
+    /**
+     * 服务名
+     */
+    @Value("${spring.application.name}")
+    private String serverName;
+
+    /**
+     * 系统繁忙信息
+     */
+    private String errorSystemMsg;
+
     @Override
-    public void handle(HttpServletRequest request, HttpServletResponse response, BlockException exception) throws Exception {
+    public void handle(HttpServletRequest request, HttpServletResponse response, BlockException e) throws Exception {
         response.setStatus(ResultCodeEnum.SYSTEM_BUSY.getCode());
         response.setContentType("application/json;charset=utf-8");
-        Result result = Result.error(ResultCodeEnum.SYSTEM_BUSY, ResultCodeEnum.SYSTEM_BUSY.getMsg());
+        this.errorSystemMsg = new StringBuffer()
+                .append(this.serverName)
+                .append(": ").append(ResultCodeEnum.SYSTEM_BUSY.getMsg()).toString();
+        Result result = Result.error(ResultCodeEnum.SYSTEM_BUSY, this.errorSystemMsg);
         new ObjectMapper().writeValue(response.getWriter(), result);
     }
 }
