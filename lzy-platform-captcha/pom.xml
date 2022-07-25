@@ -26,6 +26,11 @@
             <groupId>com.github.whvcse</groupId>
             <artifactId>easy-captcha</artifactId>
         </dependency>
+        <!-- lzy-platform-cache -->
+        <dependency>
+            <groupId>com.lzy.platform</groupId>
+            <artifactId>lzy-platform-cache</artifactId>
+        </dependency>
     </dependencies>
 
 </project>
