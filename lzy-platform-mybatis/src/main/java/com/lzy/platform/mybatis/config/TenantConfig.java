@@ -45,7 +45,7 @@ public class TenantConfig {
             @Override
             public Expression getTenantId() {
                 String tenantId = LzyCloudAuthUtils.getTenantId();
-                log.info("TenantConfig.getTenantId() tenantId: {}", tenantId);
+                //log.info("TenantConfig.getTenantId() tenantId: {}", tenantId);
                 if (tenantId != null) {
                     return new StringValue(LzyCloudAuthUtils.getTenantId());
                 }

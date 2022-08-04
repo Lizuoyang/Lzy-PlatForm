@@ -58,8 +58,8 @@ public class LzyCloudAuthUtils {
         }
         // 租户ID
         String tenantId = request.getHeader(AuthConstant.TENANT_ID);
-        log.info("LzyCloudAuthUtils.getTenantId() tenantId:{}", tenantId);
-        // 用户信息
+//        log.info("LzyCloudAuthUtils.getTenantId() tenantId:{}", tenantId);
+        // 用户信息TenantConfig.getTenantId()
         String user = request.getHeader(AuthConstant.HEADER_USER);
         //如果请求头中的tenantId为空，那么尝试是否能够从登陆用户中去获取租户id
         if (StrUtil.isEmpty(tenantId) && StrUtil.isNotEmpty(user)) {
