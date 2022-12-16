@@ -1,0 +1,15 @@
+spring:
+  flyway:
+    # 禁用 Flyway 所有的 drop 相关的逻辑，避免出现跑路的情况。
+    clean-disabled: false
+    # 迁移脚本目录配置
+    locations:
+      - classpath:db/migration # 配置SQL-based 的 SQL脚本目录
+      - classpath:com.lizuoyang.springboot.databaseVersionControl.migration # 配置JAVA-based 的 JAVA文件目录
+    # 是否校验迁移脚本目录下。如果配置为 true, 代表需要校验。
+    # 此时，如果目录下没有迁移脚本，会抛出 IllegalStateException 异常
+    check-location: false
+    # 数据库地址
+    url: ${spring.datasource.url}
+    username: ${spring.datasource.username}
+    password: ${spring.datasource.password}

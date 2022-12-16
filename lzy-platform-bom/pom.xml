@@ -64,6 +64,8 @@
         <kafka.clients.version>3.1.0</kafka.clients.version>
         <!-- skywalking-log4j2 traceId -->
         <skywalking.log4j2.version>6.4.0</skywalking.log4j2.version>
+        <!-- 数据库版本管理工具 -->
+        <flyway.core.version>6.0.8</flyway.core.version>
     </properties>
 
     <dependencyManagement>
@@ -186,6 +188,12 @@
                 <groupId>org.apache.kafka</groupId>
                 <artifactId>kafka-clients</artifactId>
                 <version>${kafka.clients.version}</version>
+            </dependency>
+            <!-- flyway-->
+            <dependency>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-core</artifactId>
+                <version>${flyway.core.version}</version>
             </dependency>
 
             <!-- 数据库驱动及连接池 -->

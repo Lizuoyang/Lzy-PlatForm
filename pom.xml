@@ -20,6 +20,7 @@
         <module>lzy-platform-oauth2</module>
         <module>lzy-platform-captcha</module>
         <module>lzy-platform-cache</module>
+        <module>lzy-platform-flyway</module>
     </modules>
 
     <properties>
