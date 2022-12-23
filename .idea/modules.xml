@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Lzy-PlatForm.iml" filepath="$PROJECT_DIR$/.idea/Lzy-PlatForm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lzy-platform-base/lzy-platform-base.iml" filepath="$PROJECT_DIR$/lzy-platform-base/lzy-platform-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lzy-platform-bom/lzy-platform-bom.iml" filepath="$PROJECT_DIR$/lzy-platform-bom/lzy-platform-bom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lzy-platform-cache/lzy-platform-cache.iml" filepath="$PROJECT_DIR$/lzy-platform-cache/lzy-platform-cache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lzy-platform-captcha/lzy-platform-captcha.iml" filepath="$PROJECT_DIR$/lzy-platform-captcha/lzy-platform-captcha.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lzy-platform-db/lzy-platform-db.iml" filepath="$PROJECT_DIR$/lzy-platform-db/lzy-platform-db.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lzy-platform-flyway/lzy-platform-flyway.iml" filepath="$PROJECT_DIR$/lzy-platform-flyway/lzy-platform-flyway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lzy-platform-mybatis/lzy-platform-mybatis.iml" filepath="$PROJECT_DIR$/lzy-platform-mybatis/lzy-platform-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lzy-platform-oauth2/lzy-platform-oauth2.iml" filepath="$PROJECT_DIR$/lzy-platform-oauth2/lzy-platform-oauth2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lzy-platform-springboot/lzy-platform-springboot.iml" filepath="$PROJECT_DIR$/lzy-platform-springboot/lzy-platform-springboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lzy-platform-springcloud/lzy-platform-springcloud.iml" filepath="$PROJECT_DIR$/lzy-platform-springcloud/lzy-platform-springcloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lzy-platform-swagger2/lzy-platform-swagger2.iml" filepath="$PROJECT_DIR$/lzy-platform-swagger2/lzy-platform-swagger2.iml" />
+    </modules>
+  </component>
+</project>

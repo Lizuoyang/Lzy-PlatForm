@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>lzy-platform</artifactId>
+        <groupId>com.lzy.platform</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>lzy-platform-captcha</artifactId>
+    <name>${project.artifactId}</name>
+    <description>用于统一管理验证码生成及配置</description>
+    <version>${project.parent.version}</version>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <!-- captcha 滑动验证码-->
+        <dependency>
+            <groupId>com.github.anji-plus</groupId>
+            <artifactId>captcha-spring-boot-starter</artifactId>
+        </dependency>
+        <!-- easy-captcha 图形验证码-->
+        <dependency>
+            <groupId>com.github.whvcse</groupId>
+            <artifactId>easy-captcha</artifactId>
+        </dependency>
+        <!-- lzy-platform-cache -->
+        <dependency>
+            <groupId>com.lzy.platform</groupId>
+            <artifactId>lzy-platform-cache</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

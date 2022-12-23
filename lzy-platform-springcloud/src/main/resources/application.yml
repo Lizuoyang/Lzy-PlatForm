@@ -1,0 +1,6 @@
+# 暴露/actuator/sentinel端点的配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

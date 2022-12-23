@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>lzy-platform</artifactId>
+        <groupId>com.lzy.platform</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <groupId>com.lzy.platform</groupId>
+    <artifactId>lzy-platform-flyway</artifactId>
+    <name>lzy-platform-flyway</name>
+    <description>用于数据库版本管理框架：flyway</description>
+    <version>${project.parent.version}</version>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <!-- 同时，spring-boot-starter-jdbc 支持 Flyway 的自动化配置 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
+        <!-- Flyway -->
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+        </dependency>
+
+        <!-- 数据库依赖 -->
+        <dependency>
+            <groupId>com.lzy.platform</groupId>
+            <artifactId>lzy-platform-db</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.12.RELEASE</version>
+        <relativePath />
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lzy.platform</groupId>
+    <artifactId>lzy-platform-bom</artifactId>
+    <name>${project.artifactId}</name>
+    <description>统一管理自定义方法扩展jar包及第三方Jar包版本。</description>
+    <version>${lzy.project.version}</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <!-- jdk版本1.8 -->
+        <java.version>1.8</java.version>
+        <!-- maven-compiler-plugin插件版本，Java代码编译 -->
+        <maven.plugin.version>3.8.1</maven.plugin.version>
+        <!-- maven编译时指定编码UTF-8 -->
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+        <!-- 项目统一字符集编码UTF-8 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- 项目统一字符集编码UTF-8 -->
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <!-- lzy-cloud项目统一设置版本号 -->
+        <lzy.project.version>0.0.1-SNAPSHOT</lzy.project.version>
+
+        <!-- mysql数据库驱动 -->
+        <mysql.connector.version>8.0.17</mysql.connector.version>
+        <!-- postgresql数据库驱动 -->
+        <postgresql.connector.version>9.1-901.jdbc4</postgresql.connector.version>
+        <!-- 数据库连接池Druid -->
+        <druid.version>1.1.23</druid.version>
+        <!-- Mybatis Plus增强工具 -->
+        <mybatis.plus.version>3.4.0</mybatis.plus.version>
+        <!-- Knife4j Swagger2文档 -->
+        <knife4j.version>3.0.3</knife4j.version>
+        <!-- SpringBoot版本号 -->
+        <spring.boot.version>2.3.12.RELEASE</spring.boot.version>
+        <!-- SpringCloud版本号 -->
+        <spring.cloud.version>Hoxton.SR12</spring.cloud.version>
+        <!-- Spring Cloud Alibaba -->
+        <spring.cloud.alibaba>2.2.3.RELEASE</spring.cloud.alibaba>
+        <!-- hutool Java常用工具包 -->
+        <hutool.version>5.5.1</hutool.version>
+        <!-- redisson Redis客户端工具 -->
+        <redisson.version>3.13.6</redisson.version>
+        <!-- AJ-Captcha滑动验证码 -->
+        <captcha.version>1.2.7</captcha.version>
+        <!-- Easy-Captcha图形验证码 -->
+        <easy.captcha.version>1.6.2</easy.captcha.version>
+        <!-- 修复log4j2漏洞 -->
+        <log4j2.version>2.17.1</log4j2.version>
+        <!-- log4j2支持异步日志，导入disruptor依赖，不需要支持异步日志，也可以去掉该依赖包 -->
+        <log4j2.disruptor.version>3.4.4</log4j2.disruptor.version>
+        <!-- log4j2记录到kafka需要的依赖 -->
+        <kafka.clients.version>3.1.0</kafka.clients.version>
+        <!-- skywalking-log4j2 traceId -->
+        <skywalking.log4j2.version>6.4.0</skywalking.log4j2.version>
+        <!-- 数据库版本管理工具 -->
+        <flyway.core.version>6.0.8</flyway.core.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- Spring Cloud Alibaba -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring.cloud.alibaba}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- swagger-knife4j -->
+            <dependency>
+                <groupId>com.lzy.platform</groupId>
+                <artifactId>lzy-platform-swagger2</artifactId>
+                <version>${lzy.project.version}</version>
+            </dependency>
+            <!-- mysql数据库驱动 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.version}</version>
+            </dependency>
+            <!-- postgresql数据库驱动 -->
+            <dependency>
+                <groupId>postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${postgresql.connector.version}</version>
+            </dependency>
+            <!-- 数据库连接池 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <!-- Mybatis Plus增强工具 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
+            <!-- Swagger2 knife4j bom方式引入 -->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-dependencies</artifactId>
+                <version>${knife4j.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- hutool java工具包-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+            <!-- redisson Redis客户端-->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+            <!-- captcha 滑动验证码-->
+            <dependency>
+                <groupId>com.github.anji-plus</groupId>
+                <artifactId>captcha-spring-boot-starter</artifactId>
+                <version>${captcha.version}</version>
+            </dependency>
+            <!-- easy-captcha 图形验证码-->
+            <dependency>
+                <groupId>com.github.whvcse</groupId>
+                <artifactId>easy-captcha</artifactId>
+                <version>${easy.captcha.version}</version>
+            </dependency>
+            <!-- skywalking-log4j2链路id -->
+            <dependency>
+                <groupId>org.apache.skywalking</groupId>
+                <artifactId>apm-toolkit-log4j-2.x</artifactId>
+                <version>${skywalking.log4j2.version}</version>
+            </dependency>
+            <!-- 修复log4j2漏洞 -->
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-api</artifactId>
+                <version>${log4j2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>${log4j2.version}</version>
+            </dependency>
+            <!-- log4j2读取spring配置的依赖库 -->
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-spring-boot</artifactId>
+                <version>${log4j2.version}</version>
+            </dependency>
+            <!-- log4j2支持异步日志，导入disruptor依赖，不需要支持异步日志，也可以去掉该依赖包 -->
+            <dependency>
+                <groupId>com.lmax</groupId>
+                <artifactId>disruptor</artifactId>
+                <version>${log4j2.disruptor.version}</version>
+            </dependency>
+            <!-- log4j2 kafka appender -->
+            <dependency>
+                <groupId>org.apache.kafka</groupId>
+                <artifactId>kafka-clients</artifactId>
+                <version>${kafka.clients.version}</version>
+            </dependency>
+            <!-- flyway-->
+            <dependency>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-core</artifactId>
+                <version>${flyway.core.version}</version>
+            </dependency>
+
+            <!-- 数据库驱动及连接池 -->
+            <dependency>
+                <groupId>com.lzy.platform</groupId>
+                <artifactId>lzy-platform-db</artifactId>
+                <version>${lzy.project.version}</version>
+            </dependency>
+            <!-- mybatis-plus -->
+            <dependency>
+                <groupId>com.lzy.platform</groupId>
+                <artifactId>lzy-platform-mybatis</artifactId>
+                <version>${lzy.project.version}</version>
+            </dependency>
+            <!-- base 通用组件 -->
+            <dependency>
+                <groupId>com.lzy.platform</groupId>
+                <artifactId>lzy-platform-base</artifactId>
+                <version>${lzy.project.version}</version>
+            </dependency>
+            <!-- 缓存 -->
+            <dependency>
+                <groupId>com.lzy.platform</groupId>
+                <artifactId>lzy-platform-cache</artifactId>
+                <version>${lzy.project.version}</version>
+            </dependency>
+            <!-- oauth2 认证和授权 -->
+            <dependency>
+                <groupId>com.lzy.platform</groupId>
+                <artifactId>lzy-platform-oauth2</artifactId>
+                <version>${lzy.project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lzy.platform</groupId>
+                <artifactId>lzy-platform-captcha</artifactId>
+                <version>${lzy.project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
