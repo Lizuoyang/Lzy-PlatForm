@@ -68,6 +68,8 @@
         <flyway.core.version>6.0.8</flyway.core.version>
         <!-- excel操作工具-->
         <easy.excel.version>3.1.4</easy.excel.version>
+        <!-- feign的网络连接工具-->
+        <feign.httpclient.version>11.8</feign.httpclient.version>
     </properties>
 
     <dependencyManagement>
@@ -204,6 +206,12 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>easyexcel</artifactId>
                 <version>${easy.excel.version}</version>
+            </dependency>
+            <!-- 修复feign调用报错（too many bytes written）-->
+            <dependency>
+                <groupId>io.github.openfeign</groupId>
+                <artifactId>feign-httpclient</artifactId>
+                <version>${feign.httpclient.version}</version>
             </dependency>
 
             <!-- 数据库驱动及连接池 -->
