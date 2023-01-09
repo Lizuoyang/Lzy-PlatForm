@@ -21,6 +21,8 @@
         <module>lzy-platform-captcha</module>
         <module>lzy-platform-cache</module>
         <module>lzy-platform-flyway</module>
+        <module>lzy-platform-excel</module>
+        <module>lzy-platform-excel</module>
     </modules>
 
     <properties>
