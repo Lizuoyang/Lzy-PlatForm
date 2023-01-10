@@ -70,6 +70,8 @@
         <easy.excel.version>3.1.4</easy.excel.version>
         <!-- feign的网络连接工具-->
         <feign.httpclient.version>11.8</feign.httpclient.version>
+        <!-- bean的转换工具-->
+        <mapstruct.version>1.4.1.Final</mapstruct.version>
     </properties>
 
     <dependencyManagement>
@@ -212,6 +214,12 @@
                 <groupId>io.github.openfeign</groupId>
                 <artifactId>feign-httpclient</artifactId>
                 <version>${feign.httpclient.version}</version>
+            </dependency>
+            <!-- mapstruct -->
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
             </dependency>
 
             <!-- 数据库驱动及连接池 -->
