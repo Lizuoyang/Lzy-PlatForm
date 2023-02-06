@@ -12,7 +12,7 @@ import lombok.Data;
  **/
 @Data
 @ApiModel(value = "CheckExist对象", description = "校验某个对象字段是否存在")
-public class CheckExistDto {
+public class CheckExistDTO {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "主键")
