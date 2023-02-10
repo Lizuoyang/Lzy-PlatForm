@@ -12,18 +12,13 @@
         <property name="LOG_PATTERN"
                   value="%d %highlight{%-5level [%traceId] pid:%pid-%line}{ERROR=Bright RED, WARN=Bright Yellow, INFO=Bright Green, DEBUG=Bright Cyan, TRACE=Bright White} %style{[%t]}{bright,magenta} %style{%c{1.}.%M(%L)}{cyan}: %msg%n"/>
         <!-- 读取application.yaml文件中设置的日志路径 logging.file.path-->
-        <property name="FILE_PATH" value="/var/log"/>
+        <Property name="FILE_PATH">${spring:logging.file.path}</Property>
+        <!-- <property name="FILE_PATH">D:\\log4j2_cloud</property> -->
+        <property name="applicationName">${spring:spring.application.name}</property>
         <property name="FILE_STORE_MAX" value="50MB"/>
         <property name="FILE_WRITE_INTERVAL" value="1"/>
         <property name="LOG_MAX_HISTORY" value="60"/>
     </Properties>
-
-    <CustomLevels>
-        <!--操作日志-->
-        <CustomLevel name="OPERATION" intLevel="310" />
-        <!--访问日志-->
-        <CustomLevel name="API" intLevel="320" />
-    </CustomLevels>
 
     <appenders>
         <!-- 控制台输出 -->
@@ -124,7 +119,7 @@
             <DefaultRolloverStrategy max="${LOG_MAX_HISTORY}"/>
         </RollingRandomAccessFile>
 
-        <Kafka name="KafkaOperationLog" topic="operation_log" ignoreExceptions="false">
+         <Kafka name="KafkaOperationLog" topic="operation_log" ignoreExceptions="false">
             <LevelRangeFilter minLevel="OPERATION" maxLevel="OPERATION" onMatch="ACCEPT" onMismatch="DENY"/>
             <PatternLayout pattern="${LOG_PATTERN}"/>
             <Property name="bootstrap.servers">192.168.56.102:9092</Property>
@@ -154,6 +149,9 @@
             <AppenderRef ref="Console"/>
         </Logger>
 
+        <!-- 避免递归记录日志 -->
+        <Logger name="org.apache.kafka" level="INFO" />
+
         <AsyncLogger name="AsyncLogger" level="debug" additivity="false">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="RollingFileDebug"/>
@@ -162,8 +160,8 @@
             <AppenderRef ref="RollingFileError"/>
             <AppenderRef ref="RollingFileOperation"/>
             <AppenderRef ref="RollingFileApi"/>
-            <AppenderRef ref="KafkaOperationLog"/>
-            <AppenderRef ref="KafkaApiLog"/>
+            <!-- <AppenderRef ref="KafkaOperationLog"/>
+            <AppenderRef ref="KafkaApiLog"/> -->
         </AsyncLogger>
 
         <root level="trace">
@@ -174,8 +172,8 @@
             <appender-ref ref="RollingFileError"/>
             <AppenderRef ref="RollingFileOperation"/>
             <AppenderRef ref="RollingFileApi"/>
-            <AppenderRef ref="KafkaOperationLog"/>
-            <AppenderRef ref="KafkaApiLog"/>
+            <!-- <AppenderRef ref="KafkaOperationLog"/>
+            <AppenderRef ref="KafkaApiLog"/> -->
         </root>
     </loggers>
 
