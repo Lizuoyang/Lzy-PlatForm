@@ -127,14 +127,14 @@
         <Kafka name="KafkaOperationLog" topic="operation_log" ignoreExceptions="false">
             <LevelRangeFilter minLevel="OPERATION" maxLevel="OPERATION" onMatch="ACCEPT" onMismatch="DENY"/>
             <PatternLayout pattern="${LOG_PATTERN}"/>
-            <Property name="bootstrap.servers">172.16.20.220:9092,172.16.20.221:9092,172.16.20.222:9092</Property>
+            <Property name="bootstrap.servers">192.168.56.102:9092</Property>
             <Property name="max.block.ms">2000</Property>
         </Kafka>
 
         <Kafka name="KafkaApiLog" topic="api_log" ignoreExceptions="false">
             <LevelRangeFilter minLevel="API" maxLevel="API" onMatch="ACCEPT" onMismatch="DENY"/>
             <PatternLayout pattern="${LOG_PATTERN}"/>
-            <Property name="bootstrap.servers">172.16.20.220:9092,172.16.20.221:9092,172.16.20.222:9092</Property>
+            <Property name="bootstrap.servers">192.168.56.102:9092</Property>
             <Property name="max.block.ms">2000</Property>
         </Kafka>
 

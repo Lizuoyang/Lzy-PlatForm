@@ -22,6 +22,7 @@
         <module>lzy-platform-cache</module>
         <module>lzy-platform-flyway</module>
         <module>lzy-platform-excel</module>
+        <module>lzy-platform-log</module>
     </modules>
 
     <properties>
